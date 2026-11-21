@@ -1,0 +1,11 @@
+#!/bin/sh
+# 统一运行入口。默认 macOS(系统 python3.12 + vendored 依赖);
+# 服务器设 QFAB_PY(kuafu 环境的 python)+ QFAB_NO_VENDOR=1 走 pip 装的干净依赖。
+# 用法: ./qrun experiments/xx.py [args...]
+PROJ="$(cd "$(dirname "$0")" && pwd)"
+if [ -n "$QFAB_NO_VENDOR" ]; then
+  export PYTHONPATH="$PROJ${PYTHONPATH:+:$PYTHONPATH}"
+else
+  export PYTHONPATH="$PROJ:$PROJ/vendor:$PROJ/../QEC${PYTHONPATH:+:$PYTHONPATH}"
+fi
+exec "${QFAB_PY:-/opt/homebrew/bin/python3.12}" "$@"

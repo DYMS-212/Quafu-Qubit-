@@ -1,0 +1,11 @@
+# Quafu-QEC 运行依赖(Linux/服务器 kuafu 环境;python 3.12)
+# 重建环境: conda create -y -n kuafu python=3.12 && pip install -r requirements.txt
+# 注意: quarkcircuit 内部依赖 IPython,必须显式装(否则芯片拓扑 Backend(...).chip_info 会崩)
+numpy
+scipy
+networkx
+pymatching==2.4.0
+matplotlib
+ipython
+quarkstudio==7.3.9
+quarkcircuit==0.5.5

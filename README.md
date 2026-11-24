@@ -6,7 +6,7 @@
 
 ## 一眼看结果
 
-全部数字均为 QUAFU 真机实测（Quafu-SQC，2026-07-08 至 07-28，20 个运行日，Baihua 156q / Dongling 84q / Shenglian 84q，共 **64,098** 个真机任务）。统计口径为跨日均值与 bootstrap 95% 置信区间。
+全部数字均为 QUAFU 真机实测（Quafu-SQC，2026-07-08 至 07-28，20 个运行日，Baihua 156q / Dongling 84q / Shenglian 84q，共 **62,413** 个有 counts 的真机任务；另有 1,685 个提交后超时或编译失败、没有 counts 的任务单列在 `data/task_ids_no_result.csv`）。统计口径为跨日均值与 bootstrap 95% 置信区间。
 
 | 结果 | 数值 | 芯片 | 报告章节 |
 | --- | --- | --- | --- |
@@ -32,7 +32,8 @@ code/
   requirements.txt             依赖清单
   qrun                         统一运行入口
 data/
-  task_ids.csv                 纳入统计的 64,098 个真机任务（实验、日期、提交时间、芯片、任务 ID）
+  task_ids.csv                 纳入统计的 62,413 个真机任务（均有 counts；实验、日期、提交时间、芯片、任务 ID）
+  task_ids_no_result.csv       已提交但没有 counts 的 1,685 个任务（超时未收回或编译失败），注明原因
   task_summary.csv             按“实验 × 芯片”汇总的任务数与起止时间
   task_ids_supplement.csv      未纳入统计的 1,850 个自测、探针等任务
   stats.md / stats.json        报告全部统计数字

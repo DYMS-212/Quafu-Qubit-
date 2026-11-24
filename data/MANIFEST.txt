@@ -99,6 +99,7 @@ data/csv/weather_e26_ccz.csv
 data/stats.json
 data/stats.md
 data/task_ids.csv
+data/task_ids_no_result.csv
 data/task_ids_supplement.csv
 data/task_summary.csv
 真机任务清单与主要结果.md

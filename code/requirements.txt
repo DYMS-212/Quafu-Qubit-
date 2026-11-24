@@ -8,4 +8,4 @@ pymatching==2.4.0
 matplotlib
 ipython
 quarkstudio==7.3.9
-quarkcircuit==0.5.5
+quarkcircuit==0.5.11  # 比赛期间用的 0.5.5 已从 PyPI 下架;0.5.11 下已复核离线验证与统计重算

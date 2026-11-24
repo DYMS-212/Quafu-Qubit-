@@ -6,7 +6,7 @@
 ## 真机工作量(评审维度:真机实践)
 
 - 有效天数 **20**(2026-07-08 → 2026-07-28),三机:Baihua/Dongling/Shenglian
-- 真机任务总数 **64098**(日均 3205;去重任务 ID,与 task_ids.csv 逐条对应);summary 文件 2107 个
+- 真机任务总数 **62413**(日均 3121;有 counts 的去重任务 ID,与 task_ids.csv 逐条对应;另有 1685 个提交后超时或编译失败、无 counts 的任务列于 task_ids_no_result.csv,不参与任何统计);summary 文件 2107 个
 
 ## e24 逻辑 Bell vs 物理 Bell(headline #1)
 
